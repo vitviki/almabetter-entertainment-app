@@ -47,7 +47,7 @@ app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 // Sign up will be called here for middlware to take place
 app.post("/api/v1/user/register", upload.single("picture"), Register);
 app.use("/api/v1/user", userRoute);
-app.use("/", (req, res) => res.send("Express on vercel"));
+app.get("/", (req, res) => res.send("Express on vercel"));
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
