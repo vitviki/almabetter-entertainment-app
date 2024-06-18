@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+html, body {
+    padding: 1rem .5rem;
+    background-color: #10141E;
+}
+
+@layer utilities {
+    .heading-l {
+        @apply font-palanquin text-[32px] font-semibold tracking-wider; 
+    }
+
+    .heading-m {
+        @apply font-palanquin text-[24px] font-semibold tracking-wide;
+    }
+
+    .heading-s {
+        @apply font-palanquin text-[20px] font-semibold;
+    }
+
+    .heading-xs {
+        @apply font-palanquin text-[18px];
+    }
+
+    .heading-2xs {
+        @apply font-palanquin text-[16px]
+    }
+
+    .body-m {
+        @apply font-montserrat text-[15px] tracking-wide;
+    }
+
+    .body-s {
+        @apply font-montserrat text-[13px];
+    }
+    
+    .body-xs {
+        @apply font-montserrat text-[11px];
+    }
+
+    .search-empty {
+        @apply font-montserrat text-[24px] placeholder:text-gray-500 text-white;
+    }
+
+    .search-active {
+        @apply font-montserrat text-[24px] text-white mb-1;
+    }
+    
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    
+    
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+}
+
