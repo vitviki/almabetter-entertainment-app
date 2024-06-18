@@ -11,12 +11,6 @@ import { fileURLToPath } from "url";
 
 dotenv.config({ path: ".env" });
 
-// Cors Options
-const corsOptions = {
-  origin: "https://almabetter-entertainment-app.vercel.app/",
-  credentials: true,
-};
-
 // File Storage Options for profile picture.
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -40,7 +34,8 @@ const __dirname = path.dirname(__filename);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(cors(corsOptions));
+app.use(cors());
+app.options("*", cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 // API routes.
