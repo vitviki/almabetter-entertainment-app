@@ -21,6 +21,10 @@ const storage = multer.diskStorage({
   },
 });
 
+const corsOptions = {
+  credentials: false,
+};
+
 // Middleware for file upload
 const upload = multer({ storage });
 
@@ -34,7 +38,7 @@ const __dirname = path.dirname(__filename);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Credentials", true);
   res.header("Access-Control-Allow-Origin", "*");
