@@ -40,8 +40,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Credentials", false);
-  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://almabetter-entertainment-app.vercel.app"
+  );
   res.header("Access-Control-Allow-Methods", "DELETE, PUT, GET, POST");
   res.header(
     "Access-Control-Allow-Headers",
