@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   async function handleLogout() {
     try {
-      const res = await axios.get(`${API_END_POINT}/api/v1/user/logout`);
+      const res = await axios.get(`${API_END_POINT}api/v1/user/logout`);
       console.log(res);
       if (res.data.success) {
         console.log("hello");
