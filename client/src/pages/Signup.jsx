@@ -43,13 +43,12 @@ const Signup = () => {
 
     try {
       const res = await axios.post(
-        `${API_END_POINT}/api/v1/user/register`,
+        `${API_END_POINT}api/v1/user/register`,
         formData,
         {
           headers: {
             "Content-Type": "multipart/form-data",
           },
-          withCredentials: true,
         }
       );
 
@@ -57,7 +56,7 @@ const Signup = () => {
         toast.success(res.data.message);
       }
     } catch (error) {
-      toast.error(error.response.data.message);
+      console.log(error);
     } finally {
       onSubmitProps.resetForm();
       dispatch(setLoading(false));

@@ -40,11 +40,10 @@ const Bookmark = ({ element, type }) => {
 
             // Make a call to the backend API
             const res = await axios.put(
-              `${API_END_POINT}/api/v1/user/${user._id}/addRemoveFavoriteMovies`,
+              `${API_END_POINT}api/v1/user/${user._id}/addRemoveFavoriteMovies`,
               movieData,
               {
                 headers: { "Content-Type": "application/json" },
-                withCredentials: true,
               }
             );
 
@@ -67,11 +66,10 @@ const Bookmark = ({ element, type }) => {
 
             // Make a call to the backend API
             const res = await axios.put(
-              `${API_END_POINT}/api/v1/user/${user._id}/addRemoveFavoriteTV`,
+              `${API_END_POINT}api/v1/user/${user._id}/addRemoveFavoriteTV`,
               tvData,
               {
                 headers: { "Content-Type": "application/json" },
-                withCredentials: true,
               }
             );
 

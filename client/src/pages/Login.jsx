@@ -34,13 +34,12 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        `${API_END_POINT}/api/v1/user/login`,
+        `${API_END_POINT}api/v1/user/login`,
         formData,
         {
           headers: {
             "Content-Type": "application/json",
           },
-          withCredentials: true,
         }
       );
 

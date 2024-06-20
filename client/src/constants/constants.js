@@ -8,7 +8,7 @@ export const options = {
 };
 
 export const API_END_POINT =
-  "https://almabetter-entertainment-app-1jrp-server.vercel.app";
+  "https://almabetter-entertainment-app.onrender.com/";
 export const TMDB_HOME = "https://api.themoviedb.org/3";
 export const SEACH_MOVIES_URL =
   "https://api.themoviedb.org/3/search/movie?query=";
